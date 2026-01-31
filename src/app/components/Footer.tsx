@@ -21,8 +21,8 @@ export const Footer = () => {
               Elevating male performance to a standard of luxury and sophistication in the heart of Oahu. Professional, respectful, and undeniably sultry. 21+ only.
             </p>
             <div className="flex gap-8">
-              <a href="https://instagram.com/trident.entertainment" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-gold transition-colors"><Instagram size={22} /></a>
-              <a href="https://facebook.com/tridentent" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-gold transition-colors"><Facebook size={22} /></a>
+              <a href="https://www.instagram.com/trident.entertainment_/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-gold transition-colors"><Instagram size={22} /></a>
+              <a href="https://www.facebook.com/profile.php?id=61568242777390" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-gold transition-colors"><Facebook size={22} /></a>
               <a href="mailto:tridententertainment3@gmail.com" className="text-white/60 hover:text-gold transition-colors"><Mail size={22} /></a>
             </div>
           </div>
