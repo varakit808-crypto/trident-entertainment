@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form"
 
 type FormData = {
@@ -10,11 +10,35 @@ type FormData = {
 };
 
 export const Booking = () => {
-  const { register, handleSubmit } = useForm<FormData>();
+  const { register, handleSubmit, reset } = useForm<FormData>();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    alert("Thank you for your inquiry. A concierge will contact you within 24 hours.");
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/send-inquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send inquiry');
+      }
+
+      setSubmitStatus('success');
+      reset(); // Clear the form
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -85,11 +109,22 @@ export const Booking = () => {
             </div>
 
             <div className="mt-20 text-center">
+              {submitStatus === 'success' && (
+                <div className="mb-8 p-6 bg-green-900/20 border border-green-500/30 text-green-400 font-sans tracking-wide">
+                  Thank you for your inquiry. A concierge will contact you within 24 hours.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="mb-8 p-6 bg-red-900/20 border border-red-500/30 text-red-400 font-sans tracking-wide">
+                  There was an error submitting your inquiry. Please try again or email us directly at tridententertainment3@gmail.com
+                </div>
+              )}
               <button
                 type="submit"
-                className="px-20 py-5 gold-bg text-[#14361d] font-sans font-bold tracking-[0.3em] uppercase hover:bg-white transition-all duration-500 rounded-sm shadow-2xl"
+                disabled={isSubmitting}
+                className="px-20 py-5 gold-bg text-[#14361d] font-sans font-bold tracking-[0.3em] uppercase hover:bg-white transition-all duration-500 rounded-sm shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Submit Inquiry
+                {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
               </button>
             </div>
           </div>

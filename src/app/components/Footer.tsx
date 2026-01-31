@@ -21,9 +21,9 @@ export const Footer = () => {
               Elevating male performance to a standard of luxury and sophistication in the heart of Oahu. Professional, respectful, and undeniably sultry. 21+ only.
             </p>
             <div className="flex gap-8">
-              <a href="#" className="text-white/60 hover:text-gold transition-colors"><Instagram size={22} /></a>
-              <a href="#" className="text-white/60 hover:text-gold transition-colors"><Facebook size={22} /></a>
-              <a href="#" className="text-white/60 hover:text-gold transition-colors"><Mail size={22} /></a>
+              <a href="https://instagram.com/trident.entertainment" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-gold transition-colors"><Instagram size={22} /></a>
+              <a href="https://facebook.com/tridentent" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-gold transition-colors"><Facebook size={22} /></a>
+              <a href="mailto:tridententertainment3@gmail.com" className="text-white/60 hover:text-gold transition-colors"><Mail size={22} /></a>
             </div>
           </div>
 
@@ -43,13 +43,17 @@ export const Footer = () => {
           <div>
             <h4 className="text-white font-[family-name:var(--font-brand)] text-2xl mb-8">Concierge</h4>
             <ul className="space-y-5 text-xs font-sans tracking-[0.1em] text-white/40 font-medium">
-              <li className="flex items-center gap-4 hover:text-gold transition-colors cursor-pointer">
-                <Phone size={16} className="text-gold" />
-                808-634-0013
+              <li>
+                <a href="tel:+18086340013" className="flex items-center gap-4 hover:text-gold transition-colors">
+                  <Phone size={16} className="text-gold" />
+                  808-634-0013
+                </a>
               </li>
-              <li className="flex items-center gap-4 hover:text-gold transition-colors cursor-pointer">
-                <Mail size={16} className="text-gold" />
-                tridententertainment3@gmail.com
+              <li>
+                <a href="mailto:tridententertainment3@gmail.com" className="flex items-center gap-4 hover:text-gold transition-colors">
+                  <Mail size={16} className="text-gold" />
+                  tridententertainment3@gmail.com
+                </a>
               </li>
               <li className="mt-10 text-[10px] tracking-[0.4em] uppercase text-gold font-bold">
                 Honolulu, Oahu

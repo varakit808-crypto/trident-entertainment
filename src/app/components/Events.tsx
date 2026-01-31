@@ -98,9 +98,13 @@ export const Events = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center gap-10 lg:gap-12 mt-auto">
-                  <button className="w-full sm:w-auto px-12 py-6 gold-bg text-black font-sans font-bold tracking-[0.4em] uppercase text-[11px] hover:bg-white transition-all duration-700 shadow-2xl">
+                  {/* TODO: Update href with actual ticket platform URL (Eventbrite, Square, etc.) */}
+                  <a 
+                    href="#booking" 
+                    className="w-full sm:w-auto px-12 py-6 gold-bg text-black font-sans font-bold tracking-[0.4em] uppercase text-[11px] hover:bg-white transition-all duration-700 shadow-2xl text-center"
+                  >
                     Secure Tickets
-                  </button>
+                  </a>
                   <div className="flex flex-col items-center sm:items-start">
                     <span className="text-white font-[family-name:var(--font-brand)] text-4xl">$75</span>
                     <span className="text-[10px] tracking-[0.2em] uppercase text-white/30 font-bold">+ Tax</span>
