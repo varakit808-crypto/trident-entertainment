@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 import { Calendar, Clock, MapPin, Palette, Wine } from 'lucide-react';
 import eventImg from '@/assets/0897a27f9b261befdfe6f9b1d5480cc061875dda.png';
+import eventImgMobile from '@/assets/Sip-Paint-mobile-Cover.webp';
 
 export const Events = () => {
   return (
@@ -34,10 +35,17 @@ export const Events = () => {
         >
           {/* Banner Image */}
           <div className="w-full relative aspect-[3/4] md:aspect-video lg:aspect-[2.2/1] overflow-hidden border-b border-white/5">
+            {/* Mobile/Tablet Image */}
+            <ImageWithFallback
+              src={eventImgMobile}
+              alt="Live Muse Event"
+              className="md:hidden w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-[2s]"
+            />
+            {/* Desktop Image */}
             <ImageWithFallback
               src={eventImg}
               alt="Live Muse Event"
-              className="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-[2s]"
+              className="hidden md:block w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-[2s]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             
