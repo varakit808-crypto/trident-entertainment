@@ -120,7 +120,7 @@ export const Events = () => {
 
                 <div className="flex flex-col sm:flex-row items-center gap-10 lg:gap-12 mt-auto">
                   <a 
-                    href="https://www.eventbrite.com/e/paint-sip-live-muse-tickets-1981391422081" 
+                    href="https://buy.stripe.com/9B64gA6UJ4Bo6yDfRx2kw01" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto px-12 py-6 gold-bg text-black font-sans font-bold tracking-[0.4em] uppercase text-[11px] hover:bg-white transition-all duration-700 shadow-2xl text-center"
