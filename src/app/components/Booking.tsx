@@ -32,7 +32,7 @@ export const Booking = () => {
       }
 
       setSubmitStatus('success');
-      reset(); // Clear the form
+      reset();
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
@@ -83,9 +83,10 @@ export const Booking = () => {
                   className="w-full bg-transparent border-b border-white/10 py-4 text-white/70 focus:outline-none focus:border-gold transition-colors font-sans appearance-none cursor-pointer"
                 >
                   <option className="bg-[#202717]" value="">Select Service</option>
-                  <option className="bg-[#202717]" value="muse">The Live Muse (Paint & Sip)</option>
-                  <option className="bg-[#202717]" value="curator">The Curator (Mixology)</option>
-                  <option className="bg-[#202717]" value="signature">The Signature (Private Event)</option>
+                  <option className="bg-[#202717]" value="classic">Classic Private Performance</option>
+                  <option className="bg-[#202717]" value="partybus">Party Bus Experience</option>
+                  <option className="bg-[#202717]" value="paintsip">Paint & Sip: Live Muse</option>
+                  <option className="bg-[#202717]" value="dinnerdance">Dinner + Dance Premium</option>
                 </select>
               </div>
               <div className="space-y-3">
