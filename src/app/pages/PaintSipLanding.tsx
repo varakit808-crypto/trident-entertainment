@@ -21,7 +21,7 @@ export const PaintSipLanding = () => {
             />
           </a>
           <a
-            href="https://buy.stripe.com/9B64gA6UJ4Bo6yDfRx2kw01"
+            href="https://buy.stripe.com/6oU4gAfrfebY4qvgVB2kw05"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 gold-bg text-black font-sans font-bold tracking-[0.3em] uppercase text-[9px] hover:bg-white transition-all duration-500"
@@ -105,7 +105,7 @@ export const PaintSipLanding = () => {
               className="flex flex-col sm:flex-row items-center justify-center gap-6"
             >
               <a
-                href="https://buy.stripe.com/9B64gA6UJ4Bo6yDfRx2kw01"
+                href="https://buy.stripe.com/6oU4gAfrfebY4qvgVB2kw05"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-16 py-6 gold-bg text-black font-sans font-bold tracking-[0.4em] uppercase text-[12px] hover:bg-white transition-all duration-500 shadow-2xl"
@@ -296,7 +296,7 @@ export const PaintSipLanding = () => {
             
             <div className="flex flex-col items-center gap-6">
               <a
-                href="https://buy.stripe.com/9B64gA6UJ4Bo6yDfRx2kw01"
+                href="https://buy.stripe.com/6oU4gAfrfebY4qvgVB2kw05"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-20 py-6 gold-bg text-black font-sans font-bold tracking-[0.4em] uppercase text-[12px] hover:bg-white transition-all duration-500 shadow-2xl"
